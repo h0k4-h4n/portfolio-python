@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-
+{% load static %}
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -48,16 +48,16 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Otto Alves</a>
+            <a class="navbar-brand" href="{% url 'home' %}">Otto Alves</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-item nav-link" href="#">Home</a>
-                    <a class="nav-item nav-link" href="#">Features</a>
-                    <a class="nav-item nav-link" href="#">Pricing</a>
+                    <a class="nav-item nav-link" href="{% static 'resume.pdf' %}">Resume</a>
+                    <a class="nav-item nav-link" href="https://www.linkedin.com/in/otto-alves-862438162/">Linkedin</a>
+                    <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
                 </div>
             </div>
         </nav>
@@ -72,6 +72,7 @@
                 <p>
                     <a href="mailto:otto@email.com" class="btn btn-primary my-2">Email me</a>
                 </p>
+                <img src="{% static 'oto.jpg' %}" style="max-width: 300px; height: auto" />
             </div>
         </section>
 
